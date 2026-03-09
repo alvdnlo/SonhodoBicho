@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sonho do Bicho — O Pai Véio Revelou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kalam:wght@400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- BANDEIROLAS decorativas -->
+  <div class="bandeirolas" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="bichos-parade" aria-hidden="true">
+        <span>🦅</span><span>🐍</span><span>🦁</span><span>🐘</span><span>🐊</span><span>🦜</span><span>🐎</span><span>🐂</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-sonho">SONHO</span>
+        <span class="title-do">do</span>
+        <span class="title-bicho">BICHO</span>
+      </h1>
+      <p class="hero-sub">O Pai Véio interpreta seu sonho e revela os números da sorte</p>
+      <div class="hero-badge">✦ Tradição desde 1892 ✦</div>
+    </div>
+  </section>
+
+  <!-- INPUT -->
+  <section id="input-section">
+    <div class="container">
+      <div class="input-card">
+        <div class="input-card-header">
+          <span class="card-icon">🌙</span>
+          <span class="card-title">Conta seu sonho pro Pai Véio</span>
+        </div>
+        <textarea id="dream-input" placeholder="Descreve aí, meu irmão... o que apareceu no sonho? Água, cobra, defunto, dinheiro, fogo... não esconde nada do Pai Véio!" rows="5"></textarea>
+        <div class="input-footer">
+          <span class="input-hint">Ctrl+Enter pra revelar</span>
+          <button id="btn-reveal" class="btn-reveal">
+            <span class="btn-text">REVELAR OS NÚMEROS</span>
+            <span class="btn-icon">🔮</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOADING -->
+  <section id="loading-section" style="display:none">
+    <div class="container">
+      <div class="loading-card">
+        <div class="loading-bicho">🔮</div>
+        <div class="loading-title">Pai Véio tá consultando...</div>
+        <div id="loading-phrase" class="loading-phrase">Falando com os espíritos do jogo...</div>
+        <div class="loading-dots"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERROR -->
+  <section id="error-section" style="display:none">
+    <div class="container">
+      <div class="error-card">
+        <div class="error-icon">😤</div>
+        <div class="error-title">Eita, deu zica!</div>
+        <div id="error-msg" class="error-msg"></div>
+        <button class="btn-retry" onclick="showSection('input')">Tentar de novo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADO -->
+  <section id="result-section" style="display:none">
+    <div class="container">
+
+      <!-- Bicho Principal -->
+      <div class="result-block bicho-block">
+        <div class="block-label">✦ O BICHO PRINCIPAL ✦</div>
+        <div class="bicho-display">
+          <div id="bicho-emoji" class="bicho-emoji"></div>
+          <div class="bicho-info">
+            <div id="bicho-nome" class="bicho-nome"></div>
+            <div id="bicho-grupo" class="bicho-grupo"></div>
+            <div id="bicho-dezenas" class="bicho-dezenas"></div>
+          </div>
+        </div>
+        <div id="bicho-secundario" class="bicho-sec"></div>
+      </div>
+
+      <!-- Números -->
+      <div class="result-block numeros-block">
+        <div class="block-label">✦ SEUS NÚMEROS DA SORTE ✦</div>
+        <div class="numeros-grid">
+          <div class="numero-item">
+            <div class="numero-label">Milhar</div>
+            <div id="milhar" class="numero-val milhar-val"></div>
+          </div>
+          <div class="numero-item">
+            <div class="numero-label">Mega-Sena</div>
+            <div id="mega" class="numero-val mega-val"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cor da Sorte -->
+      <div class="result-block cor-block">
+        <div class="block-label">✦ COR DA SORTE ✦</div>
+        <div class="cor-display">
+          <div id="cor-circulo" class="cor-circulo"></div>
+          <div class="cor-info">
+            <div id="cor-nome-poetico" class="cor-poetico"></div>
+            <div id="cor-nome" class="cor-nome"></div>
+            <div id="cor-uso" class="cor-uso"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Times -->
+      <div class="result-block times-block">
+        <div class="block-label">✦ TIMES DO DESTINO ✦</div>
+        <div id="times-list" class="times-list"></div>
+      </div>
+
+      <!-- Conselho -->
+      <div class="result-block conselho-block">
+        <div class="conselho-header">
+          <span class="conselho-avatar">👴🏾</span>
+          <span class="conselho-titulo">Conselho do Pai Véio</span>
+        </div>
+        <div id="conselho-texto" class="conselho-texto"></div>
+      </div>
+
+      <!-- Botão novo sonho -->
+      <div style="text-align:center; margin-top: 32px;">
+        <button class="btn-novo" onclick="showSection('input'); document.getElementById('dream-input').value=''; document.getElementById('dream-input').focus()">
+          🌙 Interpretar outro sonho
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>⚠️ Apenas para entretenimento. O jogo do bicho é ilegal no Brasil. Jogue com responsabilidade.</p>
+    <p style="margin-top:6px; opacity:.5">Tradição desde 1892 • Barão de Drummond • Rio de Janeiro</p>
+    <p class="footer-dev">
+      Desenvolvido por <a href="https://www.instagram.com/alvdnlo/" target="_blank" rel="noopener" class="dev-link">Danilo Alves</a>
+      <br>
+      <span class="dev-frase">Guiado por Deus, Invejado por comédia</span>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
