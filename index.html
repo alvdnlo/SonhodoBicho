@@ -5,32 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sonho do Bicho — O Pai Véio Revelou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kalam:wght@400;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style(1).css"/>
 </head>
 <body>
 
-  <!-- BANDEIROLAS decorativas -->
-  <div class="bandeirolas" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
+  <!-- Animais decorativos de fundo (SVG clássico) -->
+  <div class="animal-deco animal-tl" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cobra clássica -->
+      <path d="M30,160 Q60,100 100,120 Q140,140 160,80 Q170,50 150,30 Q130,10 110,25 Q90,40 100,60 Q110,80 130,70" stroke="#3a7d44" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <circle cx="150" cy="30" r="8" fill="#3a7d44"/>
+      <path d="M148,22 L145,15 M152,22 L155,15" stroke="#3a7d44" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="animal-deco animal-tr" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Águia clássica -->
+      <ellipse cx="100" cy="100" rx="25" ry="35" fill="#e8604c"/>
+      <path d="M100,70 Q50,50 20,80 Q50,75 75,90" fill="#e8604c"/>
+      <path d="M100,70 Q150,50 180,80 Q150,75 125,90" fill="#e8604c"/>
+      <path d="M85,95 Q100,130 115,95" fill="#c0392b"/>
+      <circle cx="90" cy="82" r="4" fill="#2c1a0e"/>
+      <circle cx="110" cy="82" r="4" fill="#2c1a0e"/>
+      <path d="M92,105 L100,115 L108,105" fill="#f5c842" stroke="#f5c842" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="animal-deco animal-bl" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Leão clássico -->
+      <circle cx="100" cy="90" r="40" fill="none" stroke="#f5c842" stroke-width="12"/>
+      <circle cx="100" cy="95" r="28" fill="#f4a261"/>
+      <circle cx="88" cy="88" r="5" fill="#2c1a0e"/>
+      <circle cx="112" cy="88" r="5" fill="#2c1a0e"/>
+      <path d="M90,102 Q100,112 110,102" stroke="#2c1a0e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="100" cy="106" rx="8" ry="5" fill="#e87fab"/>
+      <path d="M100,140 Q95,160 90,175 Q100,170 110,175 Q105,160 100,140Z" fill="#f4a261"/>
+    </svg>
+  </div>
+  <div class="animal-deco animal-br" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cavalo clássico -->
+      <ellipse cx="105" cy="120" rx="45" ry="30" fill="#9e7f5e"/>
+      <path d="M80,100 Q75,60 85,45 Q95,30 100,45 Q105,60 100,100" fill="#9e7f5e"/>
+      <path d="M85,45 Q80,30 70,25 Q75,38 80,45" fill="#2c1a0e"/>
+      <circle cx="88" cy="60" r="5" fill="#2c1a0e"/>
+      <path d="M75,115 L70,165 M95,125 L92,168 M115,125 L118,168 M135,115 L140,165" stroke="#9e7f5e" stroke-width="9" stroke-linecap="round"/>
+      <path d="M145,118 Q165,110 170,125 Q155,125 145,135" fill="#9e7f5e"/>
+    </svg>
+  </div>
+
+  <!-- TOP BAR — aviso de entretenimento -->
+  <div class="topbar">
+    ⚠️ Site de entretenimento gerado por Inteligência Artificial — não representa práticas religiosas ou espirituais
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">Sonho do <span>Bicho</span></div>
+      <div class="header-credits">
+        Desenvolvido por <a href="https://www.instagram.com/alvdnlo/" target="_blank" rel="noopener">Danilo Alves</a><br>
+        <span style="font-style:italic;opacity:.7"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- COMO FUNCIONA -->
+  <div class="como-funciona">
+    <div class="como-funciona-inner">
+      <div class="como-funciona-text">
+        <strong>Como funciona o Jogo do Bicho?</strong> Criado em 1892 pelo Barão de Drummond no Rio de Janeiro,
+        é uma loteria popular com 25 animais, cada um com 4 dezenas (00–99). Você aposta num bicho e torce
+        para os números sorteados coincidirem com as dezenas do seu animal.
+      </div>
+      <a href="https://pt.wikipedia.org/wiki/Jogo_do_bicho" target="_blank" rel="noopener" class="saiba-mais">
+        📖 Saiba mais
+      </a>
+    </div>
   </div>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-glow"></div>
+    <div class="hero-pattern"></div>
     <div class="hero-inner">
-      <div class="bichos-parade" aria-hidden="true">
-        <span>🦅</span><span>🐍</span><span>🦁</span><span>🐘</span><span>🐊</span><span>🦜</span><span>🐎</span><span>🐂</span>
-      </div>
+      <div class="hero-eyebrow">✦ Tradição desde 1892 ✦</div>
       <h1 class="hero-title">
-        <span class="title-sonho">SONHO</span>
-        <span class="title-do">do</span>
-        <span class="title-bicho">BICHO</span>
+        <em>Sonho</em>
+        <strong>do Bicho</strong>
       </h1>
-      <p class="hero-sub">O Pai Véio interpreta seu sonho e revela os números da sorte</p>
-      <div class="hero-badge">✦ Tradição desde 1892 ✦</div>
+      <p class="hero-sub">Conta seu sonho pro Pai Véio e ele revela o bicho, a milhar e os números da sorte</p>
+      <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-icon">🔮</div>
+        <div class="hero-divider-line"></div>
+      </div>
     </div>
   </section>
 
@@ -39,15 +108,15 @@
     <div class="container">
       <div class="input-card">
         <div class="input-card-header">
-          <span class="card-icon">🌙</span>
+          <span style="font-size:20px">🌙</span>
           <span class="card-title">Conta seu sonho pro Pai Véio</span>
         </div>
         <textarea id="dream-input" placeholder="Descreve aí, meu irmão... o que apareceu no sonho? Água, cobra, defunto, dinheiro, fogo... não esconde nada do Pai Véio!" rows="5"></textarea>
         <div class="input-footer">
-          <span class="input-hint">Ctrl+Enter pra revelar</span>
+          <span class="input-hint">O pai véio ta ouvino meu fio 👴🏾</span>
           <button id="btn-reveal" class="btn-reveal">
-            <span class="btn-text">REVELAR OS NÚMEROS</span>
-            <span class="btn-icon">🔮</span>
+            <span>REVELAR OS NÚMEROS</span>
+            <span>🔮</span>
           </button>
         </div>
       </div>
@@ -58,10 +127,17 @@
   <section id="loading-section" style="display:none">
     <div class="container">
       <div class="loading-card">
-        <div class="loading-bicho">🔮</div>
+        <div class="loading-animal">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="35" fill="none" stroke="#ede0cc" stroke-width="6"/>
+            <circle cx="50" cy="50" r="35" fill="none" stroke="#e8604c" stroke-width="6"
+              stroke-dasharray="55 165" stroke-linecap="round"/>
+            <text x="50" y="57" text-anchor="middle" font-size="28">🔮</text>
+          </svg>
+        </div>
         <div class="loading-title">Pai Véio tá consultando...</div>
         <div id="loading-phrase" class="loading-phrase">Falando com os espíritos do jogo...</div>
-        <div class="loading-dots"><span></span><span></span><span></span></div>
+        <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
       </div>
     </div>
   </section>
@@ -78,15 +154,18 @@
     </div>
   </section>
 
-  <!-- RESULTADO -->
+  <!-- RESULTADO — ordem: bicho, milhar, significado, cor + time -->
   <section id="result-section" style="display:none">
     <div class="container">
 
-      <!-- Bicho Principal -->
-      <div class="result-block bicho-block">
-        <div class="block-label">✦ O BICHO PRINCIPAL ✦</div>
+      <!-- 1. Bicho -->
+      <div class="result-block">
+        <div class="block-accent accent-coral"></div>
+        <div class="block-label">O Bicho do Seu Sonho</div>
         <div class="bicho-display">
-          <div id="bicho-emoji" class="bicho-emoji"></div>
+          <div class="bicho-svg-wrap" id="bicho-svg-wrap">
+            <!-- SVG injetado por JS -->
+          </div>
           <div class="bicho-info">
             <div id="bicho-nome" class="bicho-nome"></div>
             <div id="bicho-grupo" class="bicho-grupo"></div>
@@ -96,42 +175,50 @@
         <div id="bicho-secundario" class="bicho-sec"></div>
       </div>
 
-      <!-- Números -->
-      <div class="result-block numeros-block">
-        <div class="block-label">✦ SEUS NÚMEROS DA SORTE ✦</div>
-        <div class="numeros-grid">
-          <div class="numero-item">
-            <div class="numero-label">Milhar</div>
-            <div id="milhar" class="numero-val milhar-val"></div>
-          </div>
-          <div class="numero-item">
-            <div class="numero-label">Mega-Sena</div>
-            <div id="mega" class="numero-val mega-val"></div>
-          </div>
+      <!-- 2. Milhar -->
+      <div class="result-block">
+        <div class="block-accent accent-green"></div>
+        <div class="block-label">Milhar da Sorte</div>
+        <div class="milhar-display">
+          <div id="milhar" class="milhar-num"></div>
+          <div class="milhar-sub">Aposte com responsabilidade</div>
         </div>
       </div>
 
-      <!-- Cor da Sorte -->
-      <div class="result-block cor-block">
-        <div class="block-label">✦ COR DA SORTE ✦</div>
-        <div class="cor-display">
+      <!-- 3. Significado do sonho -->
+      <div class="result-block">
+        <div class="block-accent accent-yellow"></div>
+        <div class="block-label">O Que Seu Sonho Significa</div>
+        <div id="significado" class="significado-texto"></div>
+      </div>
+
+      <!-- 4. Cor + Times da Sorte -->
+      <div class="result-block">
+        <div class="block-accent accent-teal"></div>
+        <div class="block-label">Cor & Times da Sorte</div>
+        <div class="cor-display" style="margin-bottom:20px">
           <div id="cor-circulo" class="cor-circulo"></div>
-          <div class="cor-info">
+          <div>
             <div id="cor-nome-poetico" class="cor-poetico"></div>
             <div id="cor-nome" class="cor-nome"></div>
             <div id="cor-uso" class="cor-uso"></div>
           </div>
         </div>
+        <div class="times-mega-grid">
+          <div>
+            <div class="subsection-title">Times do Destino</div>
+            <div id="times-list" class="times-list"></div>
+          </div>
+          <div>
+            <div class="subsection-title">Mega-Sena da Sorte</div>
+            <div id="mega" class="mega-balls"></div>
+          </div>
+        </div>
       </div>
 
-      <!-- Times -->
-      <div class="result-block times-block">
-        <div class="block-label">✦ TIMES DO DESTINO ✦</div>
-        <div id="times-list" class="times-list"></div>
-      </div>
-
-      <!-- Conselho -->
+      <!-- 5. Conselho -->
       <div class="result-block conselho-block">
+        <div class="block-accent accent-pink"></div>
         <div class="conselho-header">
           <span class="conselho-avatar">👴🏾</span>
           <span class="conselho-titulo">Conselho do Pai Véio</span>
@@ -139,8 +226,7 @@
         <div id="conselho-texto" class="conselho-texto"></div>
       </div>
 
-      <!-- Botão novo sonho -->
-      <div style="text-align:center; margin-top: 32px;">
+      <div style="text-align:center; margin-top:32px">
         <button class="btn-novo" onclick="showSection('input'); document.getElementById('dream-input').value=''; document.getElementById('dream-input').focus()">
           🌙 Interpretar outro sonho
         </button>
@@ -150,15 +236,14 @@
   </section>
 
   <footer>
-    <p>⚠️ Apenas para entretenimento. O jogo do bicho é ilegal no Brasil. Jogue com responsabilidade.</p>
-    <p style="margin-top:6px; opacity:.5">Tradição desde 1892 • Barão de Drummond • Rio de Janeiro</p>
-    <p class="footer-dev">
-      Desenvolvido por <a href="https://www.instagram.com/alvdnlo/" target="_blank" rel="noopener" class="dev-link">Danilo Alves</a>
-      <br>
+    <p>⚠️ Apenas para entretenimento. Gerado por Inteligência Artificial. O jogo do bicho é ilegal no Brasil.</p>
+    <p style="margin-top:4px;opacity:.6">Tradição desde 1892 • Barão de Drummond • Rio de Janeiro</p>
+    <div class="footer-dev">
+      Desenvolvido por <a href="https://www.instagram.com/alvdnlo/" target="_blank" rel="noopener" class="dev-link">Danilo Alves</a><br>
       <span class="dev-frase">Guiado por Deus, Invejado por comédia</span>
-    </p>
+    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app(1).js"></script>
 </body>
 </html>
