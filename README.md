@@ -65,5 +65,3 @@ O coração do projeto é o prompt do "Pai Véio do Bicho" — um personagem con
 ## 👨‍💻 Autor
 
 Desenvolvido por **[Danilo Alves](https://www.instagram.com/alvdnlo/)**
-
-*Guiado por Deus, Invejado por comédia.*
